@@ -1,27 +1,21 @@
 package com.ruzz.mywork.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.websocket.server.PathParam;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.ruzz.mywork.cof.Mycof;
-
 @Controller
-@RequestMapping("/mywork")
+@RequestMapping("/oauthsecurity")
 public class WebController {
     
-    @Autowired
-    private Mycof cof;
-    
     @ResponseBody
-    @RequestMapping(value={"/hello"},method=RequestMethod.GET)
-    public String webHelloWork() {
+    @RequestMapping(value={"/users/{id}"},method=RequestMethod.GET)
+    public String webHelloWork(@PathParam("id") String id) {
         
-        System.out.println(cof.getName());
-        System.out.println("hello world!");
-        return "hello world";
+        return null;
     }
     
 }

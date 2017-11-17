@@ -17,7 +17,6 @@ public class StartUp
         public static void main(String[] args) throws Exception
         { 
             SpringApplication application = new SpringApplication(StartUp.class);
-            application.addListeners(new ApplicationStartUpListener());
             application.run(args); 
            
         }
