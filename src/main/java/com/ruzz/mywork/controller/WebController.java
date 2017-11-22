@@ -9,15 +9,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/oauthsecurity")
 public class WebController {
     
     @ResponseBody
-    @RequestMapping(value={"/users/{id}"},method=RequestMethod.GET)
-    public String webHelloWork(@PathVariable String id) {
+    @RequestMapping(value={"/users"},method=RequestMethod.GET)
+    public String webHelloWork() {
         
     	//Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        return "product id : " + id;
+        return "product id : 1";
     }
     
 }
